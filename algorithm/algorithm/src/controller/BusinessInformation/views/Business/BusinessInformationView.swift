@@ -119,9 +119,9 @@ class BusinessInformationView: UIView{
             contentView.widthAnchor.constraint(equalTo: pagingScrollView.widthAnchor, multiplier: CGFloat(pageCount))
         ])
 
-        let xibView = PagingView(frame:CGRect(x:0, y:0, width: self.frame.width, height: self.frame.height))
+        let xibView = PageScroll(frame:CGRect(x:0, y:0, width: self.frame.width, height: self.frame.height))
         let firstView = UIView()
-        firstView.backgroundColor = .blue
+        //firstView.backgroundColor = .blue
         // Stack Viewへの追加なのでaddArrangedSubview
         contentView.addArrangedSubview(xibView)
 
