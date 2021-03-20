@@ -35,6 +35,10 @@ class BusinessInformationView: UIView{
     // 3. StackViewの作成
     let contentView = UIStackView()
 
+    let businessImage = ["Software", "Hardware", "Substrate"]
+    let business: [String] = ["software".localized, "hardware".localized, "substrate".localized]
+    let businessOverview: [String] = ["softwareOverview".localized, "hardwareOverview".localized, "substrateOverview".localized]
+
     //-------------------------------------------------------------//
     // MARK: ライフサイクル
     //-------------------------------------------------------------//
@@ -119,18 +123,14 @@ class BusinessInformationView: UIView{
             contentView.widthAnchor.constraint(equalTo: pagingScrollView.widthAnchor, multiplier: CGFloat(pageCount))
         ])
 
-        let xibView = PageScroll(frame:CGRect(x:0, y:0, width: self.frame.width, height: self.frame.height))
-        let firstView = UIView()
-        //firstView.backgroundColor = .blue
+        let firstView = InfoContents()
         // Stack Viewへの追加なのでaddArrangedSubview
-        contentView.addArrangedSubview(xibView)
+        contentView.addArrangedSubview(firstView)
 
-        let secondView = UIView()
-        secondView.backgroundColor = .purple
+        let secondView = InfoContents()
         contentView.addArrangedSubview(secondView)
 
-        let therdView = UIView()
-        therdView.backgroundColor = .magenta
+        let therdView = InfoContents()
         contentView.addArrangedSubview(therdView)
     }
 
