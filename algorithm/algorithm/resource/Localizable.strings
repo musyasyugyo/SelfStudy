@@ -2,7 +2,7 @@
   Localizable.strings
   algorithm
 
-  Created by Minako Tanaka on 2021/03/17.
+  Created by Minako Tanaka on 2021/03/21.
   
 */
 "softwareTitle" = "ソフトウェア開発事業";
@@ -14,4 +14,3 @@
 ハードウェアの技術無しに製品は成り立ちません。ハイレベルなハードウェア無しにハイレベルなソフトウェアを組み上げることは出来ないのです。";
 "substrateOverview" = "評価基板を作る上においてアートワーク設計の良し悪しは重要な問題です。\n
 パターン設計が悪いとノイズなどの弊害が出て、回路の評価をするどころではなくなり多大な時間を無駄にする事となります。";
-
