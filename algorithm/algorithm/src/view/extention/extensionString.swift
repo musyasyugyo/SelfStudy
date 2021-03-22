@@ -1,8 +1,8 @@
 //
-//  Extensions.swift
+//  ExtensionString.swift
 //  algorithm
 //
-//  Created by Minako Tanaka on 2021/03/21.
+//  Created by Minako Tanaka on 2021/03/22.
 //
 
 import UIKit
@@ -14,3 +14,4 @@ extension String {
         return localizedString
     }
 }
+
