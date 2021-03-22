@@ -29,11 +29,6 @@ class BusinessInformationView: UIView{
     // 3. StackViewの作成
     let contentView = UIStackView()
 
-    let businessImage = ["Software", "Hardware", "Substrate"]
-    let business: [String] = ["software".localized, "hardware".localized, "substrate".localized]
-    let businessOverview: [String] = ["softwareOverview".localized, "hardwareOverview".localized, "substrateOverview".localized]
-
-
     //-------------------------------------------------------------//
     // MARK: ライフサイクル
     //-------------------------------------------------------------//
@@ -111,14 +106,21 @@ class BusinessInformationView: UIView{
             // WidthはpagingScrollView.widthAnchor x ページ数
             contentView.widthAnchor.constraint(equalTo: pagingScrollView.widthAnchor, multiplier: CGFloat(pageCount))
         ])
-        let firstView = InfoContents()
+
+        let businessDataArray: [[String]] = [
+            ["1", "", "softwareTitle".localize, "softwareOverview".localize, "", "", ""],
+            ["1", "", "hardwareTitle".localize, "softwareOverview".localize, "", "", ""],
+            ["1", "", "substrateTitle".localize, "softwareOverview".localize, "", "", ""],
+        ]
+
+        let firstView = InfoContents(businessDataArray: businessDataArray[0])
         // Stack Viewへの追加なのでaddArrangedSubview
         contentView.addArrangedSubview(firstView)
 
-        let secondView = InfoContents()
+        let secondView = InfoContents(businessDataArray: businessDataArray[1])
         contentView.addArrangedSubview(secondView)
 
-        let therdView = InfoContents()
+        let therdView = InfoContents(businessDataArray: businessDataArray[2])
         contentView.addArrangedSubview(therdView)
     }
 
