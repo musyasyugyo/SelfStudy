@@ -21,7 +21,6 @@ class BusinessInformationView: UIView{
     //-------------------------------------------------------------//
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var businessLabel: UITextView!
     @IBOutlet weak var pagingScrollView: UIScrollView!
     // 1. ページ数
     let pageCount = 3
@@ -107,20 +106,20 @@ class BusinessInformationView: UIView{
             contentView.widthAnchor.constraint(equalTo: pagingScrollView.widthAnchor, multiplier: CGFloat(pageCount))
         ])
 
-        let businessDataArray:[[String]] = [
-            ["1", "", "softwareTitle".localized, "", "", "", ""],
-            ["2", "", "", "", "", "", ""],
-            ["3", "", "", "", "", "", ""],
+        let businessDataArray: [[String]] = [
+            ["1", "", "softwareTitle".localized, "softwareOverview".localized, "softwareAWord".localized, "softwareBusinessContent".localized, "softwareDevelopmentResults".localized],
+            ["2", "", "hardwareTitle".localized, "hardwareOverview".localized, "hardwareAWord".localized, "hardwareBusinessContent".localized, "hardwareDevelopmentResults".localized],
+            ["3", "", "substrateTitle".localized, "substrateOverview".localized, "substrateAWord".localized, "substrateBusinessContent".localized, "substrateDevelopmentResults".localized],
         ]
 
-        let firstView = InfoContents()
+        let firstView = InfoContents(businessDataArray: businessDataArray[0])
         // Stack Viewへの追加なのでaddArrangedSubview
         contentView.addArrangedSubview(firstView)
 
-        let secondView = InfoContents()
+        let secondView = InfoContents(businessDataArray: businessDataArray[1])
         contentView.addArrangedSubview(secondView)
 
-        let therdView = InfoContents()
+        let therdView = InfoContents(businessDataArray: businessDataArray[2])
         contentView.addArrangedSubview(therdView)
     }
 
