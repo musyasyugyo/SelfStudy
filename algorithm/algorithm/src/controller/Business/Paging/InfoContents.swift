@@ -18,23 +18,19 @@ class InfoContents: UIView{
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
 
-    let Software = UIImage(named: "Software")
-    let Hardware = UIImage(named: "Hardware")
-    let Substrate = UIImage(named: "Substrate")
-    let businessImage:  Dictionary <Int, String> = [0: "Software", 1: "Hardware", 2: "Substrate"]
-    let businesstitle: Dictionary <Int, String> = [0:"softwareTitle".localized,
-                                                   1:"hardwareTitle".localized,
-                                                   2:"substrateTitle".localized]
-    let businessContents: Dictionary <Int, String> = [0:"softwareOverview".localized,
-                                                      1:"hardwareOverview".localized,
-                                                      2:"substrateOverview".localized]
-
+    var businessDataArray: [String] = []
 
     //-------------------------------------------------------------//
     // MARK: ライフサイクル
     //-------------------------------------------------------------//
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.loadNib()
+    }
+
+    init(businessDataArray: [String]) {
+        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        self.businessDataArray = businessDataArray
         self.loadNib()
     }
 
@@ -76,45 +72,12 @@ class InfoContents: UIView{
     //-------------------------------------------------------------//
     private func initialize() {
         //初期化処理
-//        if let indexTitle = businesstitle.firstIndex(where: {$0.key == 0}) {
-//            titleLabel.text = businesstitle[indexTitle].value
-//            print(businesstitle[indexTitle])
-//        }
-//        if let indexContents = businessContents.firstIndex(where: {$0.key == 0}) {
-//            contentLabel.text = businessContents[indexContents].value
-//            print(businessContents[indexContents])
-//        }
-//        titleLabel.text = "software".localized
-//        contentLabel.text = "softwareOverview".localized
-        for (key, value) in businessImage {
-            print("key: \(key), value: \(value)")
-            let displayImage = UIImageView(image: UIImage(systemName: value.value))
-            self.businessImage.addSubview(displayImage)
-        }
-        for (key, value) in businesstitle {
-            titleLabel.text = value
-            print("key: \(key), value: \(value)")
-        }
-        for (key, value) in businessContents {
-            contentLabel.text = value
-            print("key: \(key), value: \(value)")
-        }
-
-//        for value in businessImage {
-//            print(businessImage.values)
-//            //imageView.image = value.value
-//            print(value.value)
-//        }
-//        for value in businesstitle {
-//            titleLabel.text = value.value
-//            print(value.value)
-//        }
-//        for value in businessContents {
-//            contentLabel.text = value.value
-//            print(value.value)
-//        }
+        self.titleLabel.text = self.businessDataArray[2]
+        self.contentLabel.text = self.businessDataArray[3]
     }
 
+    @IBAction func moreButton(_ sender: Any) {
+    }
     //-------------------------------------------------------------//
     // MARK: delegate
     //-------------------------------------------------------------//

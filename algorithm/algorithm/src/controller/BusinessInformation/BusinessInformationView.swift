@@ -21,18 +21,12 @@ class BusinessInformationView: UIView{
     //-------------------------------------------------------------//
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var businessLabel: UITextView!
     @IBOutlet weak var pagingScrollView: UIScrollView!
     // 1. ページ数
     let pageCount = 3
 
     // 3. StackViewの作成
     let contentView = UIStackView()
-
-    let businessImage = ["Software", "Hardware", "Substrate"]
-    let business: [String] = ["software".localized, "hardware".localized, "substrate".localized]
-    let businessOverview: [String] = ["softwareOverview".localized, "hardwareOverview".localized, "substrateOverview".localized]
-
 
     //-------------------------------------------------------------//
     // MARK: ライフサイクル
@@ -111,14 +105,21 @@ class BusinessInformationView: UIView{
             // WidthはpagingScrollView.widthAnchor x ページ数
             contentView.widthAnchor.constraint(equalTo: pagingScrollView.widthAnchor, multiplier: CGFloat(pageCount))
         ])
-        let firstView = InfoContents()
+
+        let businessDataArray: [[String]] = [
+            ["1", "", "softwareTitle".localized, "softwareOverview".localized, "softwareAWord".localized, "softwareBusinessContent".localized, "softwareDevelopmentResults".localized],
+            ["2", "", "hardwareTitle".localized, "hardwareOverview".localized, "hardwareAWord".localized, "hardwareBusinessContent".localized, "hardwareDevelopmentResults".localized],
+            ["3", "", "substrateTitle".localized, "substrateOverview".localized, "substrateAWord".localized, "substrateBusinessContent".localized, "substrateDevelopmentResults".localized],
+        ]
+
+        let firstView = InfoContents(businessDataArray: businessDataArray[0])
         // Stack Viewへの追加なのでaddArrangedSubview
         contentView.addArrangedSubview(firstView)
 
-        let secondView = InfoContents()
+        let secondView = InfoContents(businessDataArray: businessDataArray[1])
         contentView.addArrangedSubview(secondView)
 
-        let therdView = InfoContents()
+        let therdView = InfoContents(businessDataArray: businessDataArray[2])
         contentView.addArrangedSubview(therdView)
     }
 
