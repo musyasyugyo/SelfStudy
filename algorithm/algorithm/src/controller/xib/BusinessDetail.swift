@@ -1,27 +1,22 @@
 //
-//  InfoContents.swift
+//  BusinessDetail.swift
 //  algorithm
 //
-//  Created by Minako Tanaka on 2021/03/21.
+//  Created by Minako Tanaka on 2021/03/24.
 //
 
 import UIKit
-protocol InfoContentsDelegate: class {
-    func toBusinessInformation()
-}
 
-class InfoContents: UIView{
-    weak var delegate: InfoContentsDelegate? = nil
+class BusinessDetail: UIView{
 
     //MARK: delegate
     //-------------------------------------------------------------//
     // MARK: 変数定義
     //-------------------------------------------------------------//
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var sendButton: UIButton!
 
+    @IBOutlet weak var aWord: UILabel!
+    @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var developmentResults: UILabel!
     var businessDataArray: [String] = []
 
     //-------------------------------------------------------------//
@@ -44,7 +39,7 @@ class InfoContents: UIView{
     }
 
     func loadNib() {
-        guard let view = Bundle.main.loadNibNamed("InfoContents", owner: self, options: nil)?.first as? UIView else {
+        guard let view = Bundle.main.loadNibNamed("BusinessDetail", owner: self, options: nil)?.first as? UIView else {
             return
         }
         view.frame = self.frame
@@ -76,12 +71,16 @@ class InfoContents: UIView{
     //-------------------------------------------------------------//
     private func initialize() {
         //初期化処理
-        self.titleLabel.text = self.businessDataArray[2]
-        self.contentLabel.text = self.businessDataArray[3]
+        self.aWord.text = self.businessDataArray[4]
+        self.content.text = self.businessDataArray[5]
+        self.developmentResults.text = self.businessDataArray[6]
+
+        if businessDataArray[0] == "3" {
+
+        }
     }
 
     @IBAction func moreButton(_ sender: Any) {
-        self.delegate?.toBusinessInformation()
     }
     //-------------------------------------------------------------//
     // MARK: delegate

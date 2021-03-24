@@ -7,8 +7,7 @@
 
 import UIKit
 
-class BusinessInformationViewController: BaseUIViewController, MainViewDelegate {
-
+class BusinessInformationViewController: BaseUIViewController, BusinessDetailDelegate {
     //MARK: deinit
     deinit {
         print("[deinit] MainViewController")
@@ -38,13 +37,19 @@ class BusinessInformationViewController: BaseUIViewController, MainViewDelegate 
     //-------------------------------------------------------------//
     private func initialize() {
         //初期化処理
-        //self.BusinessInformationView.delegate = self
+        self.businessInformation.delegate = self
     }
 
     //-------------------------------------------------------------//
     // MARK: functions
     //-------------------------------------------------------------//
-
+    func toBusinesDetails() {
+        let storyboardControlDetail: UIStoryboard = UIStoryboard(name: "BusinessDetailView", bundle: nil)
+        guard let controlDetail = storyboardControlDetail.instantiateInitialViewController() as? BaseUINavigationController else {
+            return
+        }
+        self.present(controlDetail, animated: true)
+    }
     //-------------------------------------------------------------//
     // MARK: delegate
     //-------------------------------------------------------------//

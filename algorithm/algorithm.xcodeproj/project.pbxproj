@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64320A51260A3DAD00CF3EBC /* BusinessDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64320A50260A3DAD00CF3EBC /* BusinessDetailsViewController.swift */; };
+		64320A59260A3E4600CF3EBC /* BusinessDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64320A58260A3E4600CF3EBC /* BusinessDetailsView.storyboard */; };
 		64AE5EDD25F90F2A005F97A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AE5EDC25F90F2A005F97A6 /* AppDelegate.swift */; };
 		64AE5EDF25F90F2A005F97A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AE5EDE25F90F2A005F97A6 /* SceneDelegate.swift */; };
 		64AE5EE425F90F2A005F97A6 /* BusinessInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64AE5EE225F90F2A005F97A6 /* BusinessInformation.storyboard */; };
@@ -21,6 +23,12 @@
 		64AE5F3E25F91599005F97A6 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AE5F3D25F91599005F97A6 /* BaseUIViewController.swift */; };
 		64AE5F4425F9169D005F97A6 /* BusinessInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64AE5F4325F9169D005F97A6 /* BusinessInformationView.xib */; };
 		64C5E4D525FA62C300407F20 /* BusinessInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C5E4D425FA62C300407F20 /* BusinessInformationView.swift */; };
+		64DF495B2608E38300324376 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64DF495A2608E38300324376 /* Localizable.strings */; };
+		64DF49712608E63400324376 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF49702608E63400324376 /* ExtensionString.swift */; };
+		64DF49802608E72000324376 /* InfoContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF497F2608E72000324376 /* InfoContents.swift */; };
+		64DF49852608E72900324376 /* InfoContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DF49842608E72900324376 /* InfoContents.xib */; };
+		64F4BAD2260B6CEB00D838E3 /* BusinessDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F4BAD1260B6CEB00D838E3 /* BusinessDetail.xib */; };
+		64F4BAD7260B718800D838E3 /* BusinessDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4BAD6260B718800D838E3 /* BusinessDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64320A50260A3DAD00CF3EBC /* BusinessDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailsViewController.swift; sourceTree = "<group>"; };
+		64320A58260A3E4600CF3EBC /* BusinessDetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BusinessDetailsView.storyboard; sourceTree = "<group>"; };
 		64AE5ED925F90F2A005F97A6 /* algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64AE5EDC25F90F2A005F97A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64AE5EDE25F90F2A005F97A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,12 @@
 		64AE5F3D25F91599005F97A6 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		64AE5F4325F9169D005F97A6 /* BusinessInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessInformationView.xib; sourceTree = "<group>"; };
 		64C5E4D425FA62C300407F20 /* BusinessInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInformationView.swift; sourceTree = "<group>"; };
+		64DF495A2608E38300324376 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		64DF49702608E63400324376 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		64DF497F2608E72000324376 /* InfoContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoContents.swift; path = algorithm/src/controller/Business/Paging/InfoContents.swift; sourceTree = SOURCE_ROOT; };
+		64DF49842608E72900324376 /* InfoContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoContents.xib; path = algorithm/src/controller/Business/Paging/InfoContents.xib; sourceTree = SOURCE_ROOT; };
+		64F4BAD1260B6CEB00D838E3 /* BusinessDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessDetail.xib; sourceTree = "<group>"; };
+		64F4BAD6260B718800D838E3 /* BusinessDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				64AE5EE525F90F2A005F97A6 /* Assets.xcassets */,
+				64DF495A2608E38300324376 /* Localizable.strings */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -166,6 +183,7 @@
 		64AE5F1225F91053005F97A6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				64DF496F2608E5F800324376 /* extention */,
 				64AE5F1625F910B1005F97A6 /* storyboard */,
 			);
 			path = view;
@@ -174,10 +192,12 @@
 		64AE5F1325F9105D005F97A6 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				64F4BAD0260B6CC900D838E3 /* xib */,
 				64AE5F2225F91213005F97A6 /* base */,
 				64AE5F4225F9165C005F97A6 /* BusinessInformation */,
 				64AE5F1D25F911D2005F97A6 /* MainTabBarViewController.swift */,
 				64AE5F2F25F912A4005F97A6 /* BusinessInformationViewController.swift */,
+				64320A50260A3DAD00CF3EBC /* BusinessDetailsViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -203,6 +223,7 @@
 			children = (
 				64AE5F1725F910CF005F97A6 /* Main */,
 				64AE5EE725F90F2A005F97A6 /* LaunchScreen.storyboard */,
+				64320A58260A3E4600CF3EBC /* BusinessDetailsView.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -228,10 +249,37 @@
 		64AE5F4225F9165C005F97A6 /* BusinessInformation */ = {
 			isa = PBXGroup;
 			children = (
+				64DF497E2608E6EF00324376 /* Paging */,
 				64AE5F4325F9169D005F97A6 /* BusinessInformationView.xib */,
 				64C5E4D425FA62C300407F20 /* BusinessInformationView.swift */,
 			);
 			path = BusinessInformation;
+			sourceTree = "<group>";
+		};
+		64DF496F2608E5F800324376 /* extention */ = {
+			isa = PBXGroup;
+			children = (
+				64DF49702608E63400324376 /* ExtensionString.swift */,
+			);
+			path = extention;
+			sourceTree = "<group>";
+		};
+		64DF497E2608E6EF00324376 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				64DF497F2608E72000324376 /* InfoContents.swift */,
+				64DF49842608E72900324376 /* InfoContents.xib */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		64F4BAD0260B6CC900D838E3 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				64F4BAD1260B6CEB00D838E3 /* BusinessDetail.xib */,
+				64F4BAD6260B718800D838E3 /* BusinessDetail.swift */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,7 +386,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64AE5EE925F90F2A005F97A6 /* LaunchScreen.storyboard in Resources */,
+				64DF495B2608E38300324376 /* Localizable.strings in Resources */,
+				64320A59260A3E4600CF3EBC /* BusinessDetailsView.storyboard in Resources */,
 				64AE5F1925F910F9005F97A6 /* MainTabBar.storyboard in Resources */,
+				64F4BAD2260B6CEB00D838E3 /* BusinessDetail.xib in Resources */,
+				64DF49852608E72900324376 /* InfoContents.xib in Resources */,
 				64AE5EE625F90F2A005F97A6 /* Assets.xcassets in Resources */,
 				64AE5F4425F9169D005F97A6 /* BusinessInformationView.xib in Resources */,
 				64AE5EE425F90F2A005F97A6 /* BusinessInformation.storyboard in Resources */,
@@ -370,9 +422,13 @@
 				64AE5F1E25F911D2005F97A6 /* MainTabBarViewController.swift in Sources */,
 				64AE5EDD25F90F2A005F97A6 /* AppDelegate.swift in Sources */,
 				64C5E4D525FA62C300407F20 /* BusinessInformationView.swift in Sources */,
+				64DF49712608E63400324376 /* ExtensionString.swift in Sources */,
 				64AE5F3E25F91599005F97A6 /* BaseUIViewController.swift in Sources */,
+				64F4BAD7260B718800D838E3 /* BusinessDetail.swift in Sources */,
+				64320A51260A3DAD00CF3EBC /* BusinessDetailsViewController.swift in Sources */,
 				64AE5EDF25F90F2A005F97A6 /* SceneDelegate.swift in Sources */,
 				64AE5F3025F912A4005F97A6 /* BusinessInformationViewController.swift in Sources */,
+				64DF49802608E72000324376 /* InfoContents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

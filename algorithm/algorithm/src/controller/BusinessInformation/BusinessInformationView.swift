@@ -7,14 +7,13 @@
 
 import UIKit
 
-protocol MainViewDelegate: class {
-
+protocol BusinessDetailDelegate: class {
+    func toBusinesDetails()
 }
 
-class BusinessInformationView: UIView{
-
+class BusinessInformationView: UIView, InfoContentsDelegate{
     //MARK: delegate
-    public weak var delegate: MainViewDelegate? = nil
+    public weak var delegate: BusinessDetailDelegate? = nil
 
     //-------------------------------------------------------------//
     // MARK: 変数定義
@@ -121,6 +120,10 @@ class BusinessInformationView: UIView{
 
         let therdView = InfoContents(businessDataArray: businessDataArray[2])
         contentView.addArrangedSubview(therdView)
+    }
+
+    func toBusinessInformation() {
+        self.delegate?.toBusinesDetails()
     }
 
     //-------------------------------------------------------------//
